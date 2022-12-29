@@ -1,32 +1,22 @@
+import { setStatusBarNetworkActivityIndicatorVisible } from "expo-status-bar";
 import { StyleSheet } from "react-native";
 
 
 export const styles = StyleSheet.create ({
-  container: {
-    flex: 1,
-    flexDirection: 'row'
+  container: {    
+    flexDirection: 'row',    
+    justifyContent: 'center'   
   },
 
-  buttonText: {
-    color: '#F2F2F2',
-    fontSize: 24
+  text: {
+    color: '#4EA8DE',
+    fontSize: 14,    
   },
 
-  button: {
-    width: 56,
-    height: 56,
-    borderRadius: 5,
-    backgroundColor: '#1E6F9F',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-
-  form: {
-    width: '100%',
-    flexDirection: 'row',
-    marginTop: 36,
-    marginBottom: 42
-  }
-
-  
+  taskCounter: {       
+    backgroundColor: '#333333',
+    marginLeft: 8,
+    borderRadius: 8,
+    paddingHorizontal: 8
+  }  
   })

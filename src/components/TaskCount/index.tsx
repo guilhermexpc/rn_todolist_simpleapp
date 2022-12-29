@@ -3,17 +3,19 @@ import { Text, View, TextInput, TouchableOpacity} from 'react-native';
 import { styles } from './styles';
 
 type Props = {
-  taskQuantity: number;
-  type: 'Criadas' | 'Concluidas'
+  value: number;
+  type: 'Criadas' | 'Concluidas'  
 }
 
-export function InputTask(props: Props) {
+export function TaskCount(props: Props) {
     return (
         <View style={styles.container}>
-          <Text  style={styles.container}>{props.type}</Text>
-          <View>
-            <Text style={styles.container}>{props.taskQuantity}</Text>
+            <Text style={[styles.text, {color: props.type == 'Criadas' ? '#4EA8DE' : '#8284FA'}] }>{props.type}</Text>
+          <View style={styles.taskCounter}>
+            <Text style={styles.text}>{props.value}</Text>
           </View>
         </View>
+
+
     )
 }
